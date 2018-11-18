@@ -31,8 +31,7 @@
 </div>
 </template>
 <script>
-import { db } from './config/db';
-
+import { db } from '../../config/db'
 export default {
     components: {
         name: 'UserAdd'
@@ -51,7 +50,7 @@ export default {
             re_password: ''
         }
     },
-    method: {
+    methods: {
         addItem() {
             this.$firebaseRefs.users.push({
                 name: this.newItem.name,
@@ -69,7 +68,7 @@ export default {
     },
     computed: {
         isMatch() {
-            return ((this.re_password != this.newItem.password) && this.re_password != '');
+            return ((this.re_password != this.newItem.password) || this.re_password == '');
         }
     }
 }
