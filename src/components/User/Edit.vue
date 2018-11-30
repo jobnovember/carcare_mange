@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div>
     <div class="card">
         <div class="card-header">
             <h3>Edit Users</h3>
@@ -19,7 +19,7 @@
                     <input type="text" class="form-control" v-model="newItem.password"/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Update Item"/>
+                    <input type="submit" class="btn btn-primary" value="Update"/>
                 </div>
             </form>
         </div>
@@ -43,7 +43,6 @@ export default {
     data() {
         return {
             newItem: {
-                status: 'offline'
             } 
         }
     },
@@ -57,6 +56,7 @@ export default {
     },
     methods: {
         updateItem() {
+            this.newItem.status = 'offline'
             this.$firebaseRefs.items.child(this.$route.params.id).set(this.newItem);
             this.$router.push('/user')
         }
