@@ -44,7 +44,7 @@ const routes = [
     },
     {
         name: 'BookingAdd',
-        path: '/booking/add',
+        path: '/booking/add/:date/:time/:name',
         component: BookingAdd
     },
     {
