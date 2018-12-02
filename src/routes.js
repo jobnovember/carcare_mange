@@ -10,6 +10,8 @@ import CarList from './components/Car/List.vue'
 import BookingAdd from './components/Booking/Add.vue'
 import BookingEdit from './components/Booking/Edit.vue'
 import BookingList from './components/Booking/List.vue'
+// -- Orders 
+import OrderList from './components/Order/List.vue'
 
 const routes = [
     {
@@ -56,6 +58,11 @@ const routes = [
         name: 'BookingList',
         path: '/booking',
         component: BookingList
+    },
+    {
+        name: 'OrderList',
+        path: '/Orders',
+        component: OrderList
     }
 ];
 
