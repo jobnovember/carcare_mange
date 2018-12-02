@@ -1,7 +1,6 @@
 <template>
 <div class="container">
     <h1>Booking</h1> 
-    {{date}}
     <div style="text-aling:center">
         <input name="date" type="date" v-model="date" class="form-control col-sm-6" @change="checkTime()"> 
     </div>
@@ -12,7 +11,7 @@
             {{user.name}}
         </option>
     </select>
-    <table class="table table-sm">
+    <table class="table table-sm table-hover">
         <div style="margin: .5em; padding: .5em;">
         </div>
         <thead>

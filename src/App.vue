@@ -20,6 +20,9 @@
         <li class="nav-item">
           <router-link :to="{ name: 'BookingList'}" class="nav-link">Booking</router-link>
         </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'OrderList'}" class="nav-link">Orders</router-link> 
+        </li>
       </ul>
     </nav>
     <div class="col-sm-12">
