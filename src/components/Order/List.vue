@@ -1,48 +1,57 @@
 <template>
 <div>
-    <h1>Orders</h1>
-    <div style="text-aling:center">
-        <input name="date" type="date" v-model="date" class="form-control col-sm-6" @change="fetch_order()"> 
-    </div>
-    <table class="table table-bordered" v-for="(order, i) of order_date" :key="order['.key']">
-        <thead>
-            <tr>
-                <td><b>ชื่อ </b>{{order.user_name}}</td>
-                <td>
-                    <button class="btn btn-danger" @click="deleteItem(order['.key'])">
-                        Delete
-                    </button>
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>วันที่</td>
-                <td>{{order.date}}</td>
-            </tr>
-            <tr>
-                <td>เวลา</td>
-                <td>{{order.time}}</td>
-            </tr>
-            <tr> 
-                <td>ยี่ห้อรถ</td>
-                <td>{{order.car_name}}</td>
-            </tr>
-            <tr>
-                <td>บริการ</td>
-                <td>
-                    <tr v-for="(item , index) of order.orders" :key="index">
-                        <td>{{index+1}}</td>
-                        <td>{{item}}</td>
+    <div class="card">
+        <div class="card-header">
+            <h1>ออเดอร์</h1>
+        </div>
+        <div class="card-body">
+            <div style="text-aling:center">
+                <input name="date" type="date" v-model="date" class="form-control col-sm-6" @change="fetch_order()"> 
+            </div>
+            <div class="alert alert-primary" v-if="order_date == ''">
+                <h4>ยังไม่มีออเดอร์</h4>
+            </div>
+            <table class="table table-bordered" v-for="(order, i) of order_date" :key="order['.key']">
+                <thead class="bg-dark">
+                    <tr>
+                        <td style="color:white;"><b style="font-size:1.5em;">ชื่อ </b>{{order.user_name}}</td>
+                        <td>
+                            <button class="btn btn-danger; bg-danger" @click="deleteItem(order['.key'])">
+                                ลบรายการออเดอร์
+                            </button>
+                        </td>
                     </tr>
-                </td>
-            </tr>
-            <tr>
-                <td><h2>ราคา</h2></td>
-                <td><h3>{{formatPrice(order.sum)}} บาท</h3></td>
-            </tr>
-        </tbody>
-    </table>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>วันที่</td>
+                        <td>{{order.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>เวลา</td>
+                        <td>{{order.time}}</td>
+                    </tr>
+                    <tr> 
+                        <td>ยี่ห้อรถ</td>
+                        <td>{{order.car_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>บริการ</td>
+                        <td>
+                            <tr v-for="(item , index) of order.orders" :key="index">
+                                <td>{{index+1}}</td>
+                                <td>{{item}}</td>
+                            </tr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h2>ราคา</h2></td>
+                        <td><h3>{{formatPrice(order.sum)}} บาท</h3></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </template>
 <script>

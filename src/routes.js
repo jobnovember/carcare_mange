@@ -12,7 +12,10 @@ import BookingEdit from './components/Booking/Edit.vue'
 import BookingList from './components/Booking/List.vue'
 // -- Orders 
 import OrderList from './components/Order/List.vue'
-
+// -- service
+import ServiceAdd from './components/Service/Add.vue'
+import ServiceList from './components/Service/List.vue'
+import ServiceEdit from './components/Service/Edit.vue'
 const routes = [
     {
         name: 'UserAdd',
@@ -63,6 +66,21 @@ const routes = [
         name: 'OrderList',
         path: '/Orders',
         component: OrderList
+    },
+    {
+        name: 'ServiceAdd',
+        path: '/service/add',
+        component: ServiceAdd 
+    },
+    {
+        name: 'ServiceList',
+        path: '/service',
+        component: ServiceList
+    },
+    {
+        name: 'ServiceEdit',
+        path: '/service/edit/:id',
+        component: ServiceEdit
     }
 ];
 

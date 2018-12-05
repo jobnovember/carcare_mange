@@ -3,25 +3,19 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark col-sm-12">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link :to="{ name: 'UserAdd' }" class="nav-link">Add User</router-link>
+          <router-link :to="{ name: 'UserList' }" class="nav-link">รายชื่อลูกค้า</router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'UserList' }" class="nav-link">Users</router-link>
+          <router-link :to="{ name: 'CarList' }" class="nav-link">รายการรถ</router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'CarAdd' }" class="nav-link">Add Cars</router-link>
+          <router-link :to="{ name: 'BookingList'}" class="nav-link">จองคิวล้างรถ</router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'CarList' }" class="nav-link">Cars</router-link>
+          <router-link :to="{ name: 'OrderList'}" class="nav-link">ออร์เดอร์</router-link> 
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'BookingAdd' }" class="nav-link">Add Booking</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'BookingList'}" class="nav-link">Booking</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'OrderList'}" class="nav-link">Orders</router-link> 
+          <router-link :to="{ name: 'ServiceList'}" class="nav-link">รายการบริการ</router-link>
         </li>
       </ul>
     </nav>
