@@ -3,6 +3,7 @@
     <div class="card">
         <div class="card-header">
             <h3>จอง</h3>
+            <span>{{price}}</span>
         </div>
         <div class="card-body">
             <form v-on:submit.prevent="addItem">
@@ -188,7 +189,7 @@
                for(var i=0; i<this.orders.length; i++) {
                    for(var y=0; y<this.services.length; y++){
                        if(this.orders[i] == this.services[y].name) {
-                           this.price.push(this.services[y].price);
+                           this.price.push(parseInt(this.services[y].price));
                        }
                    }
                }
