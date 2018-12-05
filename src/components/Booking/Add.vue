@@ -3,7 +3,6 @@
     <div class="card">
         <div class="card-header">
             <h3>จอง</h3>
-            <span>{{price}}</span>
         </div>
         <div class="card-body">
             <form v-on:submit.prevent="addItem">
