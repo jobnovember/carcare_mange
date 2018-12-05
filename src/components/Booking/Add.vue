@@ -197,7 +197,7 @@
            cal_sum() {
                this.sum = 0;
                for(var i=0; i< this.price.length; i++){
-                   this.sum += this.price[i];
+                   this.sum += parseInt(this.price[i]);
                }
            },
            reset() {
