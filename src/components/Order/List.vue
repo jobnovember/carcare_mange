@@ -8,7 +8,7 @@
             <div style="text-aling:center">
                 <input name="date" type="date" v-model="date" class="form-control col-sm-6" @change="fetch_order()"> 
             </div>
-            <div class="alert alert-primary" v-if="order_date == ''">
+            <div class="alert alert-primary" v-if="order_date == ''" style="margin: .5em;">
                 <h4>ยังไม่มีออเดอร์</h4>
             </div>
             <table class="table table-bordered" v-for="(order, i) of order_date" :key="order['.key']">
