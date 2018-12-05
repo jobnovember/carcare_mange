@@ -168,6 +168,8 @@
                 this.$router.push('/booking');
            },
            fetch_service() {
+               this.type= '';
+               this.service= [];
                for(var i=0; i< this.cars.length; i++){
                    if(this.cars[i].name == this.carname) {
                        this.type = this.cars[i].type;
